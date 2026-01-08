@@ -2,11 +2,11 @@ import { Code2, Lightbulb, Trophy, Users } from "lucide-react";
 const features = [{
   icon: Code2,
   title: "Build & Innovate",
-  description: "Transform your ideas into working prototypes in just 24 hours with cutting-edge technology."
+  description: "Transform your ideas into working prototypes in just 36 hours with cutting-edge technology."
 }, {
   icon: Users,
   title: "Team Collaboration",
-  description: "Form teams of 2-4 members. Inter-college teams are welcome and encouraged!"
+  description: "Form teams of 2-5 members. Inter-college teams are welcome and encouraged!"
 }, {
   icon: Lightbulb,
   title: "Expert Mentorship",
@@ -14,7 +14,7 @@ const features = [{
 }, {
   icon: Trophy,
   title: "Win Big",
-  description: "Compete for exciting prizes, swag, and recognition in the tech community."
+  description: "Compete for exciting prizes and recognition in the tech community."
 }];
 export const AboutSection = () => {
   return <section id="about" className="py-24 relative">
@@ -48,15 +48,14 @@ export const AboutSection = () => {
               <h4 className="text-foreground font-semibold mb-2">Eligibility</h4>
               <ul className="space-y-2 text-sm">
                 <li>• All undergraduate & postgraduate students</li>
-                <li>• Teams of 2-4 members</li>
+                <li>• Teams of 2-5 members</li>
                 <li>• Inter-college teams allowed</li>
               </ul>
             </div>
             <div>
               <h4 className="text-foreground font-semibold mb-2">Registration Fee</h4>
               <ul className="space-y-2 text-sm">
-                <li>• ₹400 per team (2-4 members)</li>
-                <li>• ₹500 for 5-member teams (exceptional)</li>
+                <li>• ₹2500 per team (non-refundable)</li>
                 <li>• Includes meals & accommodation</li>
               </ul>
             </div>

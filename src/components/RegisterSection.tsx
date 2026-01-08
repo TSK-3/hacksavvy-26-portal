@@ -2,11 +2,11 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 const benefits = [
-  "24 hours of non-stop hacking",
+  "36 hours of non-stop hacking",
   "Mentorship from industry experts",
   "Networking with like-minded innovators",
   "Free meals & refreshments",
-  "Exciting prizes worth ₹1L+",
+  "Exciting prizes worth ₹2L+",
   "Certificates for all participants",
 ];
 
@@ -44,9 +44,9 @@ export const RegisterSection = () => {
               {/* Right content - CTA */}
               <div className="text-center md:text-left">
                 <div className="bg-card border border-border rounded-2xl p-6">
-                  <div className="text-sm text-muted-foreground mb-2">Registration Fee</div>
+                  <div className="text-sm text-muted-foreground mb-2">Registration Fee (Non-refundable)</div>
                   <div className="text-4xl font-heading font-bold text-gradient mb-4">
-                    ₹400
+                    ₹2500
                     <span className="text-lg text-muted-foreground font-normal"> / team</span>
                   </div>
 
@@ -56,7 +56,7 @@ export const RegisterSection = () => {
                   </Button>
 
                   <p className="text-xs text-muted-foreground mt-4">
-                    Registration closes on March 1, 2026
+                    Registration closes on Feb 5, 2026
                   </p>
                 </div>
               </div>

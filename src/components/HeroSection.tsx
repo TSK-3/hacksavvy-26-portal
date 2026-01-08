@@ -33,10 +33,10 @@ export const HeroSection = () => {
           {/* Tagline */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto animate-fade-in" style={{
           animationDelay: "0.2s"
-        }}>Code. Create. Conquer.
-Join the ultimate 36-hour innovation challenge at MGIT.
+        }}>
+            Code. Create. Conquer.
             <br />
-            Join the ultimate 24-hour innovation challenge at MGIT.
+            Join the ultimate 36-hour innovation challenge at MGIT.
           </p>
 
           {/* Event details */}
@@ -45,7 +45,7 @@ Join the ultimate 36-hour innovation challenge at MGIT.
         }}>
             <div className="flex items-center gap-2 text-muted-foreground">
               <Calendar className="w-5 h-5 text-primary" />
-              <span>March 15-16, 2026</span>
+              <span>Feb 12-13, 2026 • 9:00 AM</span>
             </div>
             <div className="flex items-center gap-2 text-muted-foreground">
               <MapPin className="w-5 h-5 text-primary" />
@@ -74,7 +74,7 @@ Join the ultimate 36-hour innovation challenge at MGIT.
           animationDelay: "0.5s"
         }}>
           {[{
-            value: "₹1L+",
+            value: "₹2L+",
             label: "Prize Pool"
           }, {
             value: "36",
