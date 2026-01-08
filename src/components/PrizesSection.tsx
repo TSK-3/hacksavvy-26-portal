@@ -3,24 +3,24 @@ import { Award, Gift, Medal, Star } from "lucide-react";
 const prizes = [
   {
     place: "1st",
-    prize: "₹50,000",
+    prize: "₹1,00,000",
     icon: Award,
     color: "from-yellow-400 to-amber-600",
-    extras: ["Winner Trophy", "Internship Opportunities", "Swag Kit"],
+    extras: ["Winner Trophy"],
   },
   {
     place: "2nd",
-    prize: "₹30,000",
+    prize: "₹60,000",
     icon: Medal,
     color: "from-gray-300 to-gray-500",
-    extras: ["Runner-up Trophy", "Mentorship Sessions", "Swag Kit"],
+    extras: ["Runner-up Trophy"],
   },
   {
     place: "3rd",
-    prize: "₹20,000",
+    prize: "₹40,000",
     icon: Star,
     color: "from-amber-600 to-amber-800",
-    extras: ["Trophy", "Course Vouchers", "Swag Kit"],
+    extras: ["Trophy"],
   },
 ];
 
