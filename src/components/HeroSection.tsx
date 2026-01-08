@@ -34,7 +34,7 @@ export const HeroSection = () => {
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto animate-fade-in" style={{
           animationDelay: "0.2s"
         }}>Code. Create. Conquer.
-Join the ultimate 36-hour innovation challenge at MGIT.<span className="text-primary">Conquer.</span>
+Join the ultimate 36-hour innovation challenge at MGIT.
             <br />
             Join the ultimate 24-hour innovation challenge at MGIT.
           </p>
