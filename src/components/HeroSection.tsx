@@ -13,14 +13,6 @@ export const HeroSection = () => {
       
       <div className="container mx-auto px-4 relative z-10 pt-24">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border-glow bg-muted/30 backdrop-blur-sm mb-8 animate-fade-in">
-            <span className="w-2 h-2 bg-primary rounded-full animate-pulse-glow" />
-            <span className="text-sm font-medium text-muted-foreground">
-              National Level Hackathon 2026
-            </span>
-          </div>
-
           {/* Main heading */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold mb-6 animate-fade-in" style={{
           animationDelay: "0.1s"
