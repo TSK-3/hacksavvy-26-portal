@@ -73,11 +73,11 @@ Join the ultimate 36-hour innovation challenge at MGIT.<span className="text-pri
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 animate-fade-in" style={{
           animationDelay: "0.5s"
         }}>
-            {[{
+          {[{
             value: "₹1L+",
             label: "Prize Pool"
           }, {
-            value: "24",
+            value: "36",
             label: "Hours"
           }, {
             value: "100+",
