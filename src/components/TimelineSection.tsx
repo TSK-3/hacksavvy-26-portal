@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from "react";
+
 const timelineEvents = [
   {
     date: "Feb 15, 2026",
@@ -8,11 +10,6 @@ const timelineEvents = [
     date: "Mar 1, 2026",
     title: "Registration Closes",
     description: "Last date to register your team.",
-  },
-  {
-    date: "Mar 10, 2026",
-    title: "Team Confirmation",
-    description: "Selected teams will be notified via email.",
   },
   {
     date: "Mar 15, 2026 | 9:00 AM",
@@ -42,8 +39,30 @@ const timelineEvents = [
 ];
 
 export const TimelineSection = () => {
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!sectionRef.current) return;
+
+      const rect = sectionRef.current.getBoundingClientRect();
+      const sectionTop = rect.top;
+      const sectionHeight = rect.height;
+      const windowHeight = window.innerHeight;
+
+      const scrolled = Math.max(0, windowHeight - sectionTop);
+      const progress = Math.min(100, (scrolled / (sectionHeight + windowHeight)) * 100);
+
+      setScrollProgress(progress);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <section id="timeline" className="py-24 relative">
+    <section id="timeline" className="py-24 relative" ref={sectionRef}>
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">
@@ -56,8 +75,14 @@ export const TimelineSection = () => {
 
         <div className="max-w-3xl mx-auto">
           <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary via-secondary to-primary" />
+            {/* Timeline line - background */}
+            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-border via-border to-border" />
+
+            {/* Timeline line - progress fill */}
+            <div
+              className="absolute left-4 md:left-1/2 top-0 w-px bg-gradient-to-b from-primary via-secondary to-primary transition-all duration-300"
+              style={{ height: `${scrollProgress}%` }}
+            />
 
             {timelineEvents.map((event, index) => (
               <div
