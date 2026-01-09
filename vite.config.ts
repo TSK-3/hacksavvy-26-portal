@@ -22,7 +22,8 @@ export default defineConfig(({ mode }) => ({
     outDir: "dist",
     // Disable sourcemaps for smaller production bundle size
     sourcemap: false,
-    // Optimize chunk size
+    // Optimize chunk size by separating vendor dependencies
+    // Note: Assumes react, react-dom, and react-router-dom are installed
     rollupOptions: {
       output: {
         manualChunks: {
