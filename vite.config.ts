@@ -20,7 +20,7 @@ export default defineConfig(({ mode }) => ({
   build: {
     // Output to dist folder (default, but explicit for clarity)
     outDir: "dist",
-    // Generate sourcemaps for better debugging in production
+    // Disable sourcemaps for smaller production bundle size
     sourcemap: false,
     // Optimize chunk size
     rollupOptions: {
