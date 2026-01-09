@@ -8,7 +8,6 @@ import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { createClient } from "@supabase/supabase-js";
 
 const benefits = [
   "36 hours of non-stop hacking",
@@ -18,11 +17,6 @@ const benefits = [
   "Exciting prizes worth ₹2L+",
   "Certificates for all participants",
 ];
-
-const supabase = createClient(
-  import.meta.env.VITE_SUPABASE_URL,
-  import.meta.env.VITE_SUPABASE_ANON_KEY
-);
 
 interface TeamMember {
   name: string;
@@ -118,7 +112,11 @@ export const RegisterSection = () => {
         return;
       }
 
-      const { error } = await supabase.from("team_registrations").insert({
+      // Simulate API call with dummy data
+      await new Promise(resolve => setTimeout(resolve, 1000));
+
+      // Mock registration data for demonstration
+      const registrationData = {
         team_name: formData.teamName,
         leader_name: formData.leaderName,
         leader_phone: formData.leaderPhone,
@@ -126,28 +124,24 @@ export const RegisterSection = () => {
         branch: formData.branch,
         year: formData.year,
         members: validMembers,
-      });
+        registered_at: new Date().toISOString(),
+      };
 
-      if (error) {
-        if (error.message.includes("unique")) {
-          toast({ title: "Error", description: "Team name already exists. Please choose a different name.", variant: "destructive" });
-        } else {
-          toast({ title: "Error", description: error.message, variant: "destructive" });
-        }
-      } else {
-        toast({ title: "Success!", description: "Your team has been registered successfully!" });
-        setIsOpen(false);
-        setFormData({
-          teamName: "",
-          leaderName: "",
-          leaderPhone: "",
-          college: "",
-          branch: "",
-          year: "",
-          members: [{ name: "" }],
-        });
-        setMemberCount(1);
-      }
+      console.log("Mock registration data:", registrationData);
+
+      // Always succeed with dummy data
+      toast({ title: "Success!", description: "Your team has been registered successfully!" });
+      setIsOpen(false);
+      setFormData({
+        teamName: "",
+        leaderName: "",
+        leaderPhone: "",
+        college: "",
+        branch: "",
+        year: "",
+        members: [{ name: "" }],
+      });
+      setMemberCount(1);
     } catch (error) {
       toast({ title: "Error", description: "An unexpected error occurred", variant: "destructive" });
     } finally {
