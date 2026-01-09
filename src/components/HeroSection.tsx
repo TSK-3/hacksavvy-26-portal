@@ -14,7 +14,7 @@ export const HeroSection = () => {
       <div className="container mx-auto px-4 relative z-10 pt-24">
         <div className="max-w-4xl mx-auto text-center">
           {/* Main heading */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold mb-6 animate-fade-in" style={{
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold mb-6 animate-fade-in -ml-2" style={{
           animationDelay: "0.1s"
         }}>
             <span className="text-foreground">HACK</span>
